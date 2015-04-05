@@ -27,7 +27,18 @@
 		$getclass->video_sitemap_output();
 
 
-		} else{ ?>
+		} else{
+				$message 	= '
+							<p>This video sitemap plugin will generate an XML sitemap of all of the YouTube videos on your WordPress site.</p>
+							<p>Pick the post types you want to include and click the "Create Sitemap" button.</p>
+							<p>This will search all of the meta keys, post content and post excerpts</p>
+							';
+				$class 		= 'updated';
+
+
+				$getclass->my_admin_error_notice($message, $class);
+			?>
+
 			<form class="" action="" method="POST">
 				<input type="hidden" name="create_sitemap" value="Y" />
 				<table class="widefat">
