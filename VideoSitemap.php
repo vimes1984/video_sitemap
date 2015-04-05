@@ -303,6 +303,8 @@ class VideoSitemap{
 														<h2>Sitemap Created Correctly</h2>
 														<p>The XML sitemap was generated successfully and has been saved in your WordPress root folder at <strong>' . $video_sitemap_url . '</strong></p>
 														<p> You can view a copy of the sitemap here: <a href="/sitemap-video.xml" target="_blank">here</a></p>
+														<h3>Or edit the raw version here and manually save the file:</h3>
+														<textarea rows="30" cols="150" style="font-family:verdana; font-size:11px;color:#666;background-color:#f9f9f9;padding:5px;margin:5px">' . $xml . '</textarea>
 														<br />
 												</div>';
 							$this->my_admin_error_notice($message, $class);
