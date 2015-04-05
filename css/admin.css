@@ -1,0 +1,9 @@
+/** ADMIN STYLES **/
+#submitbtn{
+    width: 100%;
+    margin-top: 3em;
+    height: 4em;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
