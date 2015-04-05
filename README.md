@@ -1,2 +1,3 @@
+<h1>Wordpress Video Sitemap Generator</h1>
 This is a little plugin to automatically scan a sites post content and metavalues for youtube liniks and automatically generate a video_sitemap.xml
 Just upload me to your wp-content/plugins directory and activate from the plugins page...
