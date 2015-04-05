@@ -1,18 +1,18 @@
 === video-sitemap ===
 Contributors: vimes1984
 Donate link: http://buildawebdoctor.com
-Tags: comments, spam
+Tags: Sitemap, video, youtube
 Requires at least: 3.5.1
-Tested up to: 3.6
+Tested up to: 4.1.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-create a xml sitemap file
+Create a xml sitemap file
 
 == Description ==
 
-create a xml sitemap file (Longer description here)
+This is a little plugin to automatically scan a sites post content and metavalues for youtube liniks and automatically generate a video_sitemap.xml.
 
 == Installation ==
 
