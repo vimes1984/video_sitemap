@@ -237,7 +237,7 @@ class VideoSitemap{
 				$xml  = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 				$xml .= '<!-- Created by (Accrue http://www.accruemarketing.com/) -->' . "\n";
 				$xml .= '<!-- Generated-on="' . date("F j, Y, g:i a") .'" -->' . "\n";
-				$xml .= '<?xml-stylesheet type="text/xsl" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/video_sitemap/video-sitemap.xsl"?>' . "\n" ;
+				$xml .= '<?xml-stylesheet type="text/xsl" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/youtube-video-sitemap-generator/video-sitemap.xsl"?>' . "\n" ;
 				$xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">' . "\n";
 
 				$videos = array();
@@ -295,8 +295,9 @@ class VideoSitemap{
 
 				$xml .= "\n</urlset>";
 		}
-		$video_sitemap_url = $_SERVER["DOCUMENT_ROOT"] . '/sitemap-video.xml';
-		if ($this->IsVideoSitemapWritable($_SERVER["DOCUMENT_ROOT"]) || $this->IsVideoSitemapWritable($video_sitemap_url)) {
+		$path = get_home_path();
+		$video_sitemap_url = $path . '/sitemap-video.xml';
+		if ($this->IsVideoSitemapWritable($path) || $this->IsVideoSitemapWritable($video_sitemap_url)) {
 				if (file_put_contents ($video_sitemap_url, $xml)) {
 							$class = "updated";
 							$message = '<div class="wrap">
@@ -315,7 +316,7 @@ class VideoSitemap{
 			$class = "update-nag";
 			$message = '<div class="wrap">
 										<h2>Error writing the file</h2>
-										<p>The XML sitemap was generated successfully but the  plugin was unable to save the xml to your WordPress root folder at <strong>' . $_SERVER["DOCUMENT_ROOT"] . '</strong> probably because the folder doesn\'t have appropriate <a href="http://codex.wordpress.org/Changing_File_Permissions" target="_blank">write permissions</a>.</p>
+										<p>The XML sitemap was generated successfully but the  plugin was unable to save the xml to your WordPress root folder at <strong>' . $path . '</strong> probably because the folder doesn\'t have appropriate <a href="http://codex.wordpress.org/Changing_File_Permissions" target="_blank">write permissions</a>.</p>
 										<p>You can however manually copy-paste the following text into a file and save it as video-sitemap.xml in your WordPress root folder. </p>
 										<br />
 									<textarea rows="30" cols="150" style="font-family:verdana; font-size:11px;color:#666;background-color:#f9f9f9;padding:5px;margin:5px">' . $xml . '</textarea>
