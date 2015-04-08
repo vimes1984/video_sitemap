@@ -237,7 +237,7 @@ class VideoSitemap{
 				$xml  = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 				$xml .= '<!-- Created by (Accrue http://www.accruemarketing.com/) -->' . "\n";
 				$xml .= '<!-- Generated-on="' . date("F j, Y, g:i a") .'" -->' . "\n";
-				$xml .= '<?xml-stylesheet type="text/xsl" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/youtube-video-sitemap-generator/video-sitemap.xsl"?>' . "\n" ;
+				$xml .= '<?xml-stylesheet type="text/xsl" href="' . plugin_dir_url( __FILE__ ) . 'video-sitemap.xsl"?>' . "\n" ;
 				$xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">' . "\n";
 
 				$videos = array();

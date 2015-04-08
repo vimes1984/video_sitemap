@@ -4,7 +4,7 @@ Donate link: http://buildawebdoctor.com
 Tags: google sitemaps, seo, sitemaps, video seo for wordpress, video sitemap, videos, wordpress video seo, wordpress video sitemap, xml sitemaps, youtube, youtube video sitemap for wordpress
 Requires at least: 3.5.1
 Tested up to: 4.1.1
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,8 @@ None yet
 
 == Changelog ==
 
+= 1.2.1 =
+* Fixed plugin path
 = 1.2.0 =
 * Fixed folder path
 = 1.0.10 =
