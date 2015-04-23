@@ -296,7 +296,7 @@ class VideoSitemap{
 				$xml .= "\n</urlset>";
 		}
 		$path = get_home_path();
-		$video_sitemap_url = $path . '/sitemap-video.xml';
+		$video_sitemap_url = $path . 'sitemap-video.xml';
 		if ($this->IsVideoSitemapWritable($path) || $this->IsVideoSitemapWritable($video_sitemap_url)) {
 				if (file_put_contents ($video_sitemap_url, $xml)) {
 							$class = "updated";
@@ -331,8 +331,8 @@ class VideoSitemap{
 		public function recursive_array_search($needle,$haystack) {
 	    foreach($haystack as $key=>$value) {
 	        $current_key = $value;
-					$searchvalue = strstr($value, $needle);
-	        if(strstr($value, $needle) OR (is_array($value) && $this->recursive_array_search($needle,$value) !== false)) {
+					$searchvalue = @strstr($value, $needle);
+	        if(@strstr($value, $needle) OR (is_array($value) && $this->recursive_array_search($needle,$value) !== false)) {
 	            return $current_key;
 	        }
 	    }
@@ -414,8 +414,8 @@ class VideoSitemap{
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style($this->plugin_slug . "-plugin-styles", plugins_url("css/public.css", __FILE__), array(),
-			$this->version);
+		// NOT IN USE
+		//wp_enqueue_style($this->plugin_slug . "-plugin-styles", plugins_url("css/public.css", __FILE__), array(), $this->version);
 	}
 
 	/**
@@ -424,8 +424,8 @@ class VideoSitemap{
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script($this->plugin_slug . "-plugin-script", plugins_url("js/public.js", __FILE__), array("jquery"),
-			$this->version);
+		// NOT IN USE
+		//wp_enqueue_script($this->plugin_slug . "-plugin-script", plugins_url("js/public.js", __FILE__), array("jquery"), $this->version);
 	}
 
 	/**
