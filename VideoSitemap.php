@@ -435,14 +435,18 @@ class VideoSitemap{
 	 */
 	public function add_plugin_admin_menu() {
 
-		$page_title											 	= __("Video sitemap - Administration", $this->plugin_slug);
-		$menu_title												= __("Video sitemap", $this->plugin_slug);
-		$capability												= "read";
-		$menu_slug												= $this->plugin_slug;
-		$function													= array($this, "display_plugin_admin_page");
-		$icon_url													= 'dashicons-randomize';
-		$position													= 200;
-		$this->plugin_screen_hook_suffix 	= add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+		if(is_admin()){
+
+				$page_title											 	= __("Video sitemap - Administration", $this->plugin_slug);
+				$menu_title												= __("Video sitemap", $this->plugin_slug);
+				$capability												= "read";
+				$menu_slug												= $this->plugin_slug;
+				$function													= array($this, "display_plugin_admin_page");
+				$icon_url													= 'dashicons-randomize';
+				$position													= 200;
+				$this->plugin_screen_hook_suffix 	= add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+
+		}
 
 	}
 
