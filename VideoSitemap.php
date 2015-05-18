@@ -435,7 +435,7 @@ class VideoSitemap{
 	 */
 	public function add_plugin_admin_menu() {
 
-		if(is_admin()){
+		if(current_user_can('activate_plugins')){
 
 				$page_title											 	= __("Video sitemap - Administration", $this->plugin_slug);
 				$menu_title												= __("Video sitemap", $this->plugin_slug);
