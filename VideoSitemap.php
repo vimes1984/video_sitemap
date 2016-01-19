@@ -189,8 +189,6 @@ class VideoSitemap{
 	 *$posttypes = array or post sluges to check
 	 */
 	public function  create_sitemap($posttypes){
-		global $wpdb;
-
 		//Check if the post's array atleast is set...
 		if($posttypes === NULL){
 			$class 		= "update-nag";
