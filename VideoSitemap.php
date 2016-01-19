@@ -140,7 +140,7 @@ class VideoSitemap{
 							//Lets check if parent directory is writable.
 							if(!is_writable($pathtofilename)) {
 									//it's not writeable too.
-									if(!@chmod($pathtoffilename, 0666)) {
+									if(!@chmod($pathtofilename, 0666)) {
 											//darn couldn't fix up parrent directory this hosting is foobar.
 											//Lets error because of the permissions problems.
 											return false;
