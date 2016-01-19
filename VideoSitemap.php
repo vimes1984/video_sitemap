@@ -140,7 +140,7 @@ class VideoSitemap{
 							//Lets check if parent directory is writable.
 							if(!is_writable($pathtofilename)) {
 									//it's not writeable too.
-									if(!@chmod($pathtoffilename, 0666)) {
+									if(!@chmod($pathtofilename, 0666)) {
 											//darn couldn't fix up parrent directory this hosting is foobar.
 											//Lets error because of the permissions problems.
 											return false;
@@ -189,8 +189,6 @@ class VideoSitemap{
 	 *$posttypes = array or post sluges to check
 	 */
 	public function  create_sitemap($posttypes){
-		global $wpdb;
-
 		//Check if the post's array atleast is set...
 		if($posttypes === NULL){
 			$class 		= "update-nag";
